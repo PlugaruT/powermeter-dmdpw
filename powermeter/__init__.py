@@ -62,7 +62,7 @@ class PowerMeter(object):
         # watt calculations
         # the value is computed as:
         # value/10
-        return value/10 if measure_unit else value/10 * 1000
+        return value/10 if measure_unit else value * 100
 
     def get_plus_wh(self):
         """
@@ -73,7 +73,7 @@ class PowerMeter(object):
         measure_unit = self._get_dec_point()
         value = high_wh << 16
         value += low_wh
-        return value/10 if measure_unit else value/10 * 1000
+        return value/10 if measure_unit else value * 100
 
     def get_minus_wh(self):
         """
@@ -84,7 +84,7 @@ class PowerMeter(object):
         measure_unit = self._get_dec_point()
         value = high_wh << 16
         value += low_wh
-        return value/10 if measure_unit else value/10 * 1000
+        return value/10 if measure_unit else value * 100
 
     def get_relay_state(self):
         """

@@ -3,6 +3,14 @@ Overview
 
 Python library for getting readings from DMDPW power meters, via Modbus, over a serial port.
 
+Installation
+^^^^^^^^^^^^
+
+::
+
+        pip install git+ssh://git@github.com/PlugaruT/powermeter-dmdpw.git
+
+
 Example of use
 --------------
 ::
